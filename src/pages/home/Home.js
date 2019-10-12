@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <section id="cart-page">
-      <div className="class-page-title">
+      <div className="cart-page-title">
         <h2>Your Cart</h2>
         <h4>Quantity</h4>
         <h4>Price</h4>
