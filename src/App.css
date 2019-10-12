@@ -1,6 +1,13 @@
-button {
+.button {
   color: white;
+  text-decoration: none;
   background-color: blue;
   border: none;
   padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  margin: 1em 2em 1em 2em;
+}
+
+.right {
+  float: right;
 }

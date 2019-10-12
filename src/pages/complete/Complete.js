@@ -2,8 +2,12 @@ import React from "react";
 
 export default function Complete() {
   return (
-    <div>
+    <section>
       <h2>Order Complete</h2>
-    </div>
+
+      <a className="button right" href="/">
+        Go Home
+      </a>
+    </section>
   );
 }
