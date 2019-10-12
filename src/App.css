@@ -8,6 +8,10 @@
   margin: 1em 2em 1em 2em;
 }
 
+.center {
+  text-align: center;
+}
+
 .right {
   float: right;
 }
