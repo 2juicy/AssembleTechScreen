@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Billing from "./pages/billing/Billing";
 import Complete from "./pages/complete/Complete";
@@ -9,15 +9,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/billing">
-          <Billing />
-        </Route>
-        <Route path="/complete">
-          <Complete />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/billing" component={Billing} />
+        <Route path="/complete" component={Complete} />
       </Switch>
     </Router>
   );
