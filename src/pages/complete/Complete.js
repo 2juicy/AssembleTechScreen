@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Complete.css";
 
 export default function Complete() {
@@ -13,9 +14,9 @@ export default function Complete() {
       </h4>
 
       <div className="center">
-        <a className="button" href="/">
-          Go Home
-        </a>
+        <Link to={"./"}>
+          <button className="button">Go Home</button>
+        </Link>
       </div>
     </section>
   );

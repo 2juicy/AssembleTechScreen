@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Billing.css";
 
 export default function Billing() {
@@ -516,9 +517,9 @@ export default function Billing() {
         </div>
       </div>
 
-      <a className="button right" href="/complete">
-        Place Order
-      </a>
+      <Link to={"./complete"}>
+        <button className="button right">Place Order</button>
+      </Link>
     </section>
   );
 }

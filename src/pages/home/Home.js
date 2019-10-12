@@ -1,6 +1,7 @@
 import React from "react";
 import CartItems from "../../components/CartItems/CartItems";
 import Subtotal from "../../components/Subtotal/Subtotal";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
@@ -33,9 +34,9 @@ export default function Home() {
       ))}
       <Subtotal subtotal={subtotal} />
 
-      <a className="button right" href="/billing">
-        Check Out
-      </a>
+      <Link to={"./billing"}>
+        <button className="button right">Check Out</button>
+      </Link>
     </section>
   );
 }
