@@ -1,0 +1,14 @@
+#cart-page {
+  margin: 3em;
+}
+
+#cart-page > button {
+  margin: 3em;
+  float: right;
+}
+
+.class-page-title {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  border-bottom: 1px solid gray;
+}

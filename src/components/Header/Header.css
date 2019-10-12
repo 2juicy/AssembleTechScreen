@@ -1,0 +1,13 @@
+header {
+  background: blue;
+  width: 100%;
+}
+
+.header-title {
+  display: inline-block;
+  color: white;
+  margin: 0 0 0 1em;
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
