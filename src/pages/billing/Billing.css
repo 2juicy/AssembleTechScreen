@@ -1,0 +1,27 @@
+#checkout {
+  margin: 3em;
+  border-bottom: 1px solid gray;
+}
+
+.checkout-title {
+  border-bottom: 1px solid gray;
+}
+
+.payment,
+.payment-info,
+.payment-address,
+.date-selector,
+.shipping-info {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  justify-content: space-between;
+}
+
+.payment input,
+.payment select {
+  margin: 5px 0 5px 0;
+}
+
+.checkbox {
+  margin: 1em;
+}

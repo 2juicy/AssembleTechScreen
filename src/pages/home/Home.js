@@ -33,7 +33,9 @@ export default function Home() {
       ))}
       <Subtotal subtotal={subtotal} />
 
-      <button>Check Out</button>
+      <a className="button right" href="/billing">
+        Check Out
+      </a>
     </section>
   );
 }
