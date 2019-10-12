@@ -11,8 +11,8 @@ export default function App() {
     <>
       <Header />
       <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
-      <Route path="/billing" component={Billing} />
-      <Route path="/complete" component={Complete} />
+      <Route path={process.env.PUBLIC_URL + "/billing"} component={Billing} />
+      <Route path={process.env.PUBLIC_URL + "/complete"} component={Complete} />
     </>
   );
 }
