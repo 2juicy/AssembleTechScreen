@@ -6,7 +6,7 @@ import Billing from "./pages/billing/Billing";
 import Complete from "./pages/complete/Complete";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <HashRouter basename="/">
       <Header />
@@ -18,5 +18,3 @@ function App() {
     </HashRouter>
   );
 }
-
-export default App;
