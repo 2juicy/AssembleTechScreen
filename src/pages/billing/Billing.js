@@ -10,7 +10,13 @@ export default function Billing() {
       cardnum: "",
       MM: "",
       YYYY: "",
-      cvv: ""
+      cvv: "",
+      name: "",
+      address: "",
+      apt: "",
+      country: "Afghanistan",
+      state: "AL",
+      zipcode: ""
     }
   );
 
@@ -170,16 +176,32 @@ export default function Billing() {
 
           <div className="shipping-info">
             <p>Name</p>
-            <input name="name" placeholder="Name"></input>
+            <input
+              name="name"
+              onChange={onInputChange}
+              placeholder="Name"
+            ></input>
             <p>Address</p>
-            <input name="address" placeholder="Address"></input>
+            <input
+              name="address"
+              onChange={onInputChange}
+              placeholder="Address"
+            ></input>
             <p>Apt/suite/etc</p>
-            <input name="apt" placeholder="Apt/suite/etc"></input>
+            <input
+              name="apt"
+              onChange={onInputChange}
+              placeholder="Apt/suite/etc"
+            ></input>
             <p>City</p>
-            <input name="city" placeholder="City"></input>
+            <input
+              name="city"
+              onChange={onInputChange}
+              placeholder="City"
+            ></input>
 
             <p>Country</p>
-            <select name="country">
+            <select name="country" onChange={onInputChange}>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Åland Islands">Åland Islands</option>
               <option value="Albania">Albania</option>
@@ -483,7 +505,7 @@ export default function Billing() {
             </select>
 
             <p>State</p>
-            <select name="state">
+            <select name="state" onChange={onInputChange}>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
@@ -538,7 +560,11 @@ export default function Billing() {
             </select>
 
             <p>Zip Code</p>
-            <input name="zipcode" placeholder="Zip Code"></input>
+            <input
+              name="zipcode"
+              onChange={onInputChange}
+              placeholder="Zip Code"
+            ></input>
           </div>
 
           <div className="right checkbox">
