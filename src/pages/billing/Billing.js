@@ -18,7 +18,6 @@ export default function Billing() {
     const name = e.target.name;
     const val = e.target.value;
     setUserInput({ [name]: val });
-    console.log(userInput);
   };
 
   return (
