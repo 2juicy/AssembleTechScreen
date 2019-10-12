@@ -1,0 +1,11 @@
+#order-complete-page {
+  margin: 3em;
+}
+
+.complete-title {
+  border-bottom: 1px solid gray;
+}
+
+.order-text {
+  margin: 3em 0 3em 0;
+}

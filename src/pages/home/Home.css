@@ -2,7 +2,7 @@
   margin: 3em;
 }
 
-.class-page-title {
+.cart-page-title {
   display: grid;
   grid-template-columns: 50% 25% 25%;
   border-bottom: 1px solid gray;

@@ -1,13 +1,22 @@
 import React from "react";
+import "./Complete.css";
 
 export default function Complete() {
   return (
-    <section>
-      <h2>Order Complete</h2>
+    <section id="order-complete-page">
+      <div className="complete-title">
+        <h2>Order Complete</h2>
+      </div>
 
-      <a className="button right" href="/">
-        Go Home
-      </a>
+      <h4 className="order-text center">
+        Hooray! Way to order those products.
+      </h4>
+
+      <div className="center">
+        <a className="button" href="/">
+          Go Home
+        </a>
+      </div>
     </section>
   );
 }
