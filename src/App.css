@@ -15,3 +15,8 @@
 .right {
   float: right;
 }
+
+input,
+select {
+  background-color: #f5f5f5;
+}
