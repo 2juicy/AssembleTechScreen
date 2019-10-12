@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { Link } from "react-router-dom";
 import "./Billing.css";
 
 export default function Billing() {
+  const [userInput, setUserInput] = useReducer(
+    (state, newState) => ({ ...state, ...newState }),
+    {
+      nameoncard: "",
+      cardnum: "",
+      MM: "",
+      YYYY: "",
+      cvv: ""
+    }
+  );
+
+  const onInputChange = e => {
+    const name = e.target.name;
+    const val = e.target.value;
+    setUserInput({ [name]: val });
+    console.log(userInput);
+  };
+
   return (
     <section id="checkout">
       <div className="checkout-title">
@@ -14,12 +32,22 @@ export default function Billing() {
           <h4>Payment Info</h4>
           <div className="payment-info">
             <p>Name on Card</p>
-            <input placeholder="Name on Card"></input>
+            <input
+              name="nameoncard"
+              value={userInput.nameoncard}
+              onChange={onInputChange}
+              placeholder="Name on Card"
+            ></input>
             <p>Card Number</p>
-            <input placeholder="XXXX XXXX XXXX XXXX"></input>
+            <input
+              name="cardnum"
+              value={userInput.cardnum}
+              onChange={onInputChange}
+              placeholder="XXXX XXXX XXXX XXXX"
+            ></input>
             <p>Expiration Date</p>
             <div className="date-selector">
-              <select name="MM">
+              <select onChange={onInputChange} name="MM">
                 <option>- MM -</option>
                 <option value="January">January</option>
                 <option value="Febuary">Febuary</option>
@@ -34,7 +62,7 @@ export default function Billing() {
                 <option value="November">November</option>
                 <option value="December">December</option>
               </select>
-              <select name="YYYY">
+              <select onChange={onInputChange} name="YYYY">
                 <option>- YYYY -</option>
                 <option value="2020">2020</option>
                 <option value="2019">2019</option>
@@ -130,7 +158,11 @@ export default function Billing() {
               </select>
             </div>
             <p>CVV</p>
-            <input placeholder="City"></input>
+            <input
+              name="cvv"
+              onChange={onInputChange}
+              placeholder="City"
+            ></input>
           </div>
         </div>
 
@@ -139,13 +171,13 @@ export default function Billing() {
 
           <div className="shipping-info">
             <p>Name</p>
-            <input placeholder="Name"></input>
+            <input name="name" placeholder="Name"></input>
             <p>Address</p>
-            <input placeholder="Address"></input>
+            <input name="address" placeholder="Address"></input>
             <p>Apt/suite/etc</p>
-            <input placeholder="Apt/suite/etc"></input>
+            <input name="apt" placeholder="Apt/suite/etc"></input>
             <p>City</p>
-            <input placeholder="City"></input>
+            <input name="city" placeholder="City"></input>
 
             <p>Country</p>
             <select name="country">
@@ -507,7 +539,7 @@ export default function Billing() {
             </select>
 
             <p>Zip Code</p>
-            <input placeholder="Zip Code"></input>
+            <input name="zipcode" placeholder="Zip Code"></input>
           </div>
 
           <div className="right checkbox">
