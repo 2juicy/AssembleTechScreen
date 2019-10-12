@@ -1,0 +1,6 @@
+.subtotal {
+  display: grid;
+  padding-left: 50%;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid gray;
+}
