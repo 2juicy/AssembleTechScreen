@@ -164,7 +164,7 @@ export default function Billing() {
             <input
               name="cvv"
               onChange={onInputChange}
-              placeholder="City"
+              placeholder="CVV"
             ></input>
           </div>
         </div>
