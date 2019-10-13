@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "93bb3f96e5bcc2579471031a7cc04837",
+    "revision": "f198d73f3d0c9c1f084bc7e0f9f236c8",
     "url": "/AssembleTechScreen/index.html"
   },
   {
-    "revision": "def9fd4aad5fdcdd55e1",
+    "revision": "4352165067d76d1e3b3d",
     "url": "/AssembleTechScreen/static/css/main.652a975c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AssembleTechScreen/static/js/2.e626a063.chunk.js"
   },
   {
-    "revision": "def9fd4aad5fdcdd55e1",
-    "url": "/AssembleTechScreen/static/js/main.fdc79b9f.chunk.js"
+    "revision": "4352165067d76d1e3b3d",
+    "url": "/AssembleTechScreen/static/js/main.b86b7c50.chunk.js"
   },
   {
     "revision": "2e775b33ea70fbbbc78b",
