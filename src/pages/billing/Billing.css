@@ -26,3 +26,12 @@
 .checkbox {
   margin: 1em;
 }
+
+@media only screen and (max-width: 426px) {
+  #checkout {
+    margin: 0;
+  }
+  .payment {
+    display: block;
+  }
+}

@@ -14,3 +14,9 @@
   width: 75%;
   margin: 15px;
 }
+
+@media only screen and (max-width: 426px) {
+  .cart-items {
+    grid-template-columns: 30% 30% 20% 20%;
+  }
+}

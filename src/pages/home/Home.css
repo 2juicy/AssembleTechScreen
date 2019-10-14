@@ -8,6 +8,17 @@
   border-bottom: 1px solid gray;
 }
 
-.cart-page-title > h2 {
-  margin: 0;
+@media only screen and (max-width: 426px) {
+  #cart-page {
+    margin: 0;
+  }
+
+  .cart-page-title {
+    grid-template-columns: 60% 20% 20%;
+    justify-content: space-between;
+  }
+
+  .cart-page-title h4 {
+    font-size: 14px;
+  }
 }
