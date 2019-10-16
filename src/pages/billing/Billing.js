@@ -27,6 +27,16 @@ export default function Billing() {
   };
   console.table(userInput);
 
+  const formatCC = e => {
+    let formattedInput = [];
+    let input = e.target.value.replace(/\D/g, "");
+    for (let i = 0; i < input.length; i += 4) {
+      formattedInput.push(input.substr(i, 4));
+    }
+    input = formattedInput.join("-");
+    setUserInput({ cardnum: input });
+  };
+
   return (
     <section id="checkout">
       <div className="checkout-title">
@@ -47,8 +57,7 @@ export default function Billing() {
             <input
               name="cardnum"
               maxLength="19"
-              onChange={onInputChange}
-              pattern="[0-9]*"
+              onChange={formatCC}
               value={userInput.cardnum}
               placeholder="XXXX XXXX XXXX XXXX"
             />
