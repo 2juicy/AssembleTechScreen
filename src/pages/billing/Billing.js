@@ -22,7 +22,7 @@ export default function Billing() {
 
   const onInputChange = e => {
     const name = e.target.name;
-    const val = e.target.value;
+    const val = e.target.validity.valid ? e.target.value : userInput[name];
     setUserInput({ [name]: val });
   };
   console.table(userInput);
@@ -42,14 +42,17 @@ export default function Billing() {
               name="nameoncard"
               onChange={onInputChange}
               placeholder="Name on Card"
-            ></input>
+            />
             <p>Card Number</p>
             <input
               name="cardnum"
               maxLength="19"
               onChange={onInputChange}
+              maxLength="19"
+              pattern="[0-9]*"
+              value={userInput.cardnum}
               placeholder="XXXX XXXX XXXX XXXX"
-            ></input>
+            />
             <p>Expiration Date</p>
             <div className="date-selector">
               <select onChange={onInputChange} name="MM">
@@ -166,9 +169,11 @@ export default function Billing() {
             <input
               name="cvv"
               maxLength="4"
+              pattern="[0-9]*"
+              value={userInput.cvv}
               onChange={onInputChange}
               placeholder="CVV"
-            ></input>
+            />
           </div>
         </div>
 
@@ -177,29 +182,21 @@ export default function Billing() {
 
           <div className="shipping-info">
             <p>Name</p>
-            <input
-              name="name"
-              onChange={onInputChange}
-              placeholder="Name"
-            ></input>
+            <input name="name" onChange={onInputChange} placeholder="Name" />
             <p>Address</p>
             <input
               name="address"
               onChange={onInputChange}
               placeholder="Address"
-            ></input>
+            />
             <p>Apt/suite/etc</p>
             <input
               name="apt"
               onChange={onInputChange}
               placeholder="Apt/suite/etc"
-            ></input>
+            />
             <p>City</p>
-            <input
-              name="city"
-              onChange={onInputChange}
-              placeholder="City"
-            ></input>
+            <input name="city" onChange={onInputChange} placeholder="City" />
 
             <p>Country</p>
             <select name="country" onChange={onInputChange}>
@@ -564,8 +561,11 @@ export default function Billing() {
             <input
               name="zipcode"
               onChange={onInputChange}
+              maxLength="9"
+              pattern="[0-9]*"
+              value={userInput.zipcode}
               placeholder="Zip Code"
-            ></input>
+            />
           </div>
 
           <div className="right checkbox">

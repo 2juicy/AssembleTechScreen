@@ -6,7 +6,6 @@
 .checkout-title {
   border-bottom: 1px solid gray;
 }
-
 .payment,
 .payment-info,
 .payment-address,
@@ -15,6 +14,11 @@
   display: grid;
   grid-template-columns: 49% 49%;
   justify-content: space-between;
+}
+
+.payment-info,
+.shipping-info {
+  grid-template-columns: 35% 65%;
 }
 
 .payment input,
