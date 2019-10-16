@@ -25,7 +25,8 @@ export default function Billing() {
     const val = e.target.value;
     setUserInput({ [name]: val });
   };
-  console.log(userInput);
+  console.table(userInput);
+
   return (
     <section id="checkout">
       <div className="checkout-title">
@@ -45,6 +46,7 @@ export default function Billing() {
             <p>Card Number</p>
             <input
               name="cardnum"
+              maxLength="19"
               onChange={onInputChange}
               placeholder="XXXX XXXX XXXX XXXX"
             ></input>
