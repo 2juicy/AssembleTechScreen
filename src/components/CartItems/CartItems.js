@@ -8,7 +8,10 @@ export default function CartItems({ sku, name, unitPrice, quantity }) {
     <div className="cart-items">
       <div className="item-info">
         <div className="item-image">
-          <img alt={name} src={`assets/${image}.png`} />
+          <img
+            alt={name}
+            src={`${process.env.PUBLIC_URL}/assets/${image}.png`}
+          />
         </div>
         <div>
           <h4>{name}</h4>
