@@ -2,7 +2,10 @@ import React from "react";
 import "./CartItems.css";
 
 export default function CartItems({ sku, name, unitPrice, quantity }) {
-  const image = name.split(" ").join("-");
+  const image = name
+    .toLowerCase()
+    .split(" ")
+    .join("-");
 
   return (
     <div className="cart-items">
