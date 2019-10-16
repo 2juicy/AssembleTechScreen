@@ -48,7 +48,6 @@ export default function Billing() {
               name="cardnum"
               maxLength="19"
               onChange={onInputChange}
-              maxLength="19"
               pattern="[0-9]*"
               value={userInput.cardnum}
               placeholder="XXXX XXXX XXXX XXXX"
