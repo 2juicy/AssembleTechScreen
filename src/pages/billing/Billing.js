@@ -165,6 +165,7 @@ export default function Billing() {
             <p>CVV</p>
             <input
               name="cvv"
+              maxLength="4"
               onChange={onInputChange}
               placeholder="CVV"
             ></input>
