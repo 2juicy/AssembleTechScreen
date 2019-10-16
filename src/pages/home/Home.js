@@ -11,10 +11,9 @@ export default function Home() {
     { sku: 38094321, unitPrice: 12.0, name: "Blue socks", quantity: 4 }
   ];
 
-  let subtotal = 0;
-  cart.forEach(item => {
-    subtotal += item.unitPrice * item.quantity;
-  });
+  const subtotal = cart.reduce((total, item) => {
+    return item.unitPrice * item.quantity + total;
+  }, 0);
 
   return (
     <section id="cart-page">
