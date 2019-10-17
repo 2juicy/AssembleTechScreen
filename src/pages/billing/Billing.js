@@ -27,13 +27,13 @@ export default function Billing() {
   };
   console.table(userInput);
 
-  const formatCC = e => {
-    let formattedInput = [];
+  const formatInput = e => {
+    let format = [];
     let input = e.target.value.replace(/\D/g, "");
     for (let i = 0; i < input.length; i += 4) {
-      formattedInput.push(input.substr(i, 4));
+      format.push(input.substr(i, 4));
     }
-    input = formattedInput.join("-");
+    input = format.join("-");
     setUserInput({ cardnum: input });
   };
 
@@ -57,9 +57,9 @@ export default function Billing() {
             <input
               name="cardnum"
               maxLength="19"
-              onChange={formatCC}
+              onChange={formatInput}
               value={userInput.cardnum}
-              placeholder="XXXX XXXX XXXX XXXX"
+              placeholder="XXXX-XXXX-XXXX-XXXX"
             />
             <p>Expiration Date</p>
             <div className="date-selector">
